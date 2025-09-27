@@ -1,1 +1,6 @@
 venv/
+media/
+
+**/__pycahe__/
+*.pyc
+local_settings.py

@@ -1,0 +1,21 @@
+
+{% block title %}
+    حساب کاربری خود را بسازید
+{% endblock %}
+
+{% block content %}
+    <h1>حساب کاربری</h1>
+    <form class= "form-with-validation" action="{% url 'users:register' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_table }}
+        <br>
+        <button class="form-submit"><h4>ثبت نام</h4></button>
+    </form>
+{% endblock %}
+<br>
+<h3>
+   برای ورود به حساب کاربری خود روی گزینه زیر کلیک کنید👇 
+   <br>
+   <br>
+   <button><link rel="stylesheet" href="/users/login">ورود به حساب کاربری</button>
+</h3>

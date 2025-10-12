@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+</head>
+<body>
+    <h1>خروج از حساب</h1>
+
+{% if user.is_authenticated %}
+        <p>کاربر وارد شده: <strong>{{ user.username }}</strong></p>
+        <form method="post" action="">
+            {% csrf_token %}
+            <button type="submit">خروج</button>
+        </form>
+    {% else %}
+        <p>شما وارد نشده‌اید.</p>
+{% endif %}
+</body>
+</html>

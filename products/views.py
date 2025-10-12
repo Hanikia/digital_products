@@ -15,6 +15,7 @@ def post_list(request):
     posts = Product.objects.all()
     return render(request, "posts.html", {"posts": posts})
 
+
 class CategoryListView(APIView):
 
     def get(self, request):

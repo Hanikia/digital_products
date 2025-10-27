@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'Shabnam';
+  src: url('../fonts/Shabnam.ttf') format('.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: 'Shabnam';
+  src: url('../fonts/Shabnam-Bold.woff') format('woff');
+  font-weight: bold;
+} */
+
+body {
+  font-family: "Shabnam" sans-serif;
+  background-color: #ffe4c4;
+  color: #222;
+  direction: rtl;
+  text-align: center;
+  scroll-margin-top: 50px;
+  line-height: 1.6;
+  ;
+}
+
+/* عناوین */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* لینک‌ها */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover, a:focus {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+/* کارت‌ها */
+.card {
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+input{
+  width: 200px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+button{
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  background-color: #f7c68b;
+  border-color: rgba(250, 253, 255, 0.838);
+}
+
+button:hover , button:focus{
+  color: rgba(255, 255, 255, 0.968);
+  transform: translateY(5px);
+}
+

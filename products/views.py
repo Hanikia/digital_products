@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404 
 from .models import Product
 
 from rest_framework.views import APIView
@@ -13,8 +13,11 @@ def home(request):
 
 def post_list(request):
     posts = Product.objects.all()
-    return render(request, "posts.html", {"posts": posts})
+    return render(request, "post_list.html", {"posts": posts})
 
+def post_detail(request, pk):
+    post = get_object_or_404(Product, pk=pk)
+    return render(request, 'post_detail.html', {'post': post})
 
 class CategoryListView(APIView):
 

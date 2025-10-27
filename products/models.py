@@ -30,6 +30,12 @@ class Product(models.Model):
     categories = models.ManyToManyField('Category', verbose_name=_( 'categories'), blank=True )
     created_time = models.DateTimeField(_( 'created time' ),auto_now_add=True)
     updated_time = models.DateTimeField(_( 'update time' ),auto_now=True)
+    image = models.ImageField(upload_to='posts/', null=True, blank=True)
+    video = models.FileField(upload_to='posts/videos/', null=True, blank=True)
+    audio = models.FileField(upload_to='posts/audios/', null=True, blank=True)
+    pdf = models.FileField(upload_to='posts/pdfs/', null=True, blank=True)
+
+
 
     class Meta:
         db_table = 'products'
